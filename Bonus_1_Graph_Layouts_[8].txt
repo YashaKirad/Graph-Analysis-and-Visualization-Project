@@ -1,0 +1,30 @@
+I used the following libraries -
+
+NetworkX (nx):
+Used to create, manipulate, and analyze complex networks and graphs. It allows for the easy construction of graphs from various data structures, including edge lists and adjacency matrices.
+The nx.spring_layout() function was used to calculate node positions in a 2D plane. NetworkX also provides utilities for creating subgraphs, adding nodes/edges, and other graph operations.
+For 3D, nx.spring_layout() was used with the dim=3 parameter to generate positions for nodes in 3D space, allowing for a third z-dimension.
+
+Scipy (csr_matrix):
+Provides efficient sparse matrix representations, which are memory-efficient for large, sparse graphs.
+The edge list was read into a sparse matrix, and then this matrix was used to generate a graph in NetworkX. Scipy’s csr_matrix is perfect for representing adjacency matrices of large graphs.
+
+Pandas (pd):
+Used for reading and handling tabular data efficiently.
+The node labels were stored in a CSV file. Pandas was used to read the file in chunks and store the labels in a dictionary, mapping node IDs to labels.
+
+Matplotlib (plt):
+A plotting library used for visualizing data in a 2D space.
+Usage: In the 2D visualization, matplotlib’s pyplot module was used to generate a static graph. nx.draw() was used to plot the nodes and edges, while nx.draw_networkx_labels() added labels to the nodes.
+
+Plotly (go):
+A powerful library for creating interactive and dynamic visualizations, including 3D plots.
+Plotly was used for interactive graph visualizations. It provides hover information and allows users to zoom, pan, and interact with the graph dynamically.
+In 3D, Plotly’s Scatter3d was used to render nodes and edges in 3D space, providing an interactive visualization where users can rotate, zoom, and pan through the graph.
+
+
+Contribution - 
+Yashshree Kirad: Contributed to the development of the base code and visualized the graph in both 2D and 3D formats. 
+Yuting Zhou: Contributed to the creation of the base code and explored various approaches to optimize the implementation for faster results.
+Anwar Mynzhanov: Provided valuable insights during discussions and helped to improve the solution.
+
